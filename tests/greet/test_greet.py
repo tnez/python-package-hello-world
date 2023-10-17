@@ -1,4 +1,4 @@
-from python_package_hello_world.greet import greet
+from python_package_hello_world import greet
 
 
 def test_greet():
