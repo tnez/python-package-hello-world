@@ -1,0 +1,30 @@
+name: Automated Checks
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Setup Poetry
+        uses: abatilo/actions-poetry@v2
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Lint
+        run: poetry run flake8
+
+      - name: Format chec
+        run: poetry run black --check .
+
+      - name: Test
+        run: poetry run pytest
