@@ -285,25 +285,27 @@ files = [
 
 [[package]]
 name = "pylance"
-version = "0.8.5"
+version = "0.10.1"
 description = "python wrapper for Lance columnar format"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pylance-0.8.5-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:8866cec19d70d661889229d24f097e42a7f133416307df1fe94be1d05f8b75bf"},
-    {file = "pylance-0.8.5-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:724a3336f50bdf8275a1de43cacde2976db834696b2c377c35b2ee494a85e425"},
-    {file = "pylance-0.8.5-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:05885550b96afb25abcd4ebf1c16ffa82c69416a1246cc2888ce64063289ebfc"},
-    {file = "pylance-0.8.5-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8ca0a5dbfd4aeb07a5f9c7731bc433d9a0803fb20104c6beba34f9767c57a89d"},
-    {file = "pylance-0.8.5-cp38-abi3-win_amd64.whl", hash = "sha256:c4411907b7f5a977a24d929b1c91eb6d629283fd815848b04372fca68c08ea8d"},
+    {file = "pylance-0.10.1-cp38-abi3-macosx_10_15_x86_64.whl", hash = "sha256:f7dd2aab0416c0770f626104ab36f729a0268d61249452761711d018c1e7ef9e"},
+    {file = "pylance-0.10.1-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:760581a970e44dd054ad3740eb154df88fc7a016bb35b4adec73b8d229656a29"},
+    {file = "pylance-0.10.1-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:baae54aa37a1d2c5ef065e92e0805106d53b89f7f1fcd1a457a1bad91e5ff180"},
+    {file = "pylance-0.10.1-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:3d9622b8f660db3d1c7ad233547e223437a838f3eced1ca2e59c702bded84139"},
+    {file = "pylance-0.10.1-cp38-abi3-win_amd64.whl", hash = "sha256:287078721ba081d4b6b3ddd94eb3f17a01dfeb0f59b7f1ae72ec42faa46c3930"},
 ]
 
 [package.dependencies]
 numpy = ">=1.22"
-pyarrow = ">=10"
+pyarrow = ">=12"
 
 [package.extras]
 benchmarks = ["pytest-benchmark"]
-tests = ["duckdb", "ml_dtypes", "pandas (>=1.4,<2.1)", "polars[pandas,pyarrow]", "pytest", "semver", "tensorflow", "tqdm"]
+dev = ["ruff (==0.2.2)"]
+tests = ["datasets", "duckdb", "ml_dtypes", "pandas", "pillow", "polars[pandas,pyarrow]", "pytest", "tensorflow", "tqdm"]
+torch = ["torch"]
 
 [[package]]
 name = "pytest"
@@ -352,4 +354,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "80c7bdd87cce26663373f68c2d2ed461eed7c22580cae48357b533a12fc0213d"
+content-hash = "9e0201dfa1cdad2a836bd99291a7671cd862a6d32a347985c1ed69f4c0e7a874"
